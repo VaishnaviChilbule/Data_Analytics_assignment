@@ -1,0 +1,10 @@
+#multiple Linear Regression
+MR1 <- read_excel("C:/Users/dbda/Downloads/MR1.xlsx")
+attach(MR1)
+model1<-lm(Buying~Attitude+Awarness+Perception+Cost+Rating,data=MR1)
+summary(model1)
+model2<-lm(Buying~Attitude+Awarness+Perception,data=MR1)
+summary(model2)
+plot(model2)
+par(mfrow=c(2,2))
+plot(model2)
